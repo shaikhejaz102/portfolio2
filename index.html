@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaikh Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: var(--primary-color);
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            /* color: white; */
+            color: var(--secondary-color);
+        }
+
+        nav ul li a span.active {
+            color: rgb(124, 124, 250);
+        }
+
+        nav ul li a:hover {
+            color: rgb(124, 124, 250);
+            font-size: 1.03rem;
+
+        }
+
+        nav ul li a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: rgb(124, 124, 250);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+        }
+
+        main hr {
+            border: 1px solid;
+            background: #9c97f1;
+            height: 1 2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.5em;
+        }
+
+        :root {
+            --primary-color: #000;
+            --secondary-color: #fff;
+        }
+
+        .light-theme {
+            --primary-color: #dad4e9;
+            --secondary-color: #212121;
+        }
+
+        nav .rightside {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .side {
+            background: #2b2b2b;
+            padding: 9px 1px 9px 1px;
+            border: 3px solid #fff;
+            border-radius: 50px;
+            margin-right: 20px;
+        }
+
+        nav .side a {
+            text-decoration: none;
+            text-align: center;
+            color: #ffffff;
+            padding: 7px;
+            border-radius: 50px;
+        }
+
+        nav .side a:hover {
+            text-decoration: none;
+            text-align: center;
+            color: #000;
+            padding: 7px;
+            border-radius: 50px;
+            background: rgb(196, 196, 251);
+            border: 2px solid #fff;
+        }
+
+        nav .mode #icon {
+            width: 30px;
+            cursor: pointer;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 130px 0;
+            height: 70vh;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 3rem;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background: #040412;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .leftSection .btn:hover {
+            background-color: rgb(44, 44, 44);
+            font-size: 21px;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: rgb(124, 124, 250)
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(124, 124, 250)
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 70vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 6vw;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+
+        footer {
+            background-color: #baafca;
+            ;
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        .left img {
+            width: 60px;
+            margin: -11px 5px;
+            cursor: pointer;
+        }
+
+        .left img:hover {
+            width: 60px;
+            margin: -11px 5px;
+            cursor: pointer;
+            transform: rotate(45deg);
+        }
+
+        .left span {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: italic;
+            color: rgb(124, 124, 250);
+            font-size: 10px;
+        }
+
+        .footer-second ul li img {
+            width: 39px;
+        }
+
+        .footer-second ul li img:hover {
+            background-color: white;
+            border-radius: 50px;
+        }
+
+        .footer-third ul li img {
+            width: 39px;
+        }
+
+        .footer-third ul li img:hover {
+            background-color: white;
+            border-radius: 50px;
+        }
+
+        .footer-fourth ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .footer .footer-first .footer-zero {
+            font-size: 20px;
+            font-family: fantasy;
+            text-decoration: underline;
+            color: black;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .footer .footer-first .footer-zero h1:hover {
+            color: #fff;
+        }
+
+
+        .thirdSection {
+            text-align: center;
+            height: 80vh;
+        }
+
+        .thirdSection .frame {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            flex-direction: row;
+        }
+
+        .leftFrame .contain {
+            position: relative;
+            width: 16%;
+        }
+
+        .leftFrame img {
+            width: 20vw;
+            margin: 40px;
+            opacity: 1;
+            display: block;
+            transition: .25s ease-in-out;
+            backface-visibility: hidden;
+        }
+
+        .leftFrame .contain .middle {
+            transition: .25s ease;
+            opacity: 0;
+            position: absolute;
+            top: 58%;
+            left: 80%;
+            right: 51%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .leftFrame .contain:hover img {
+            opacity: 0.3;
+        }
+
+        .leftFrame .contain:hover .middle {
+            opacity: 1;
+        }
+
+        .leftFrame .contain .title {
+            background-color: #11101a96;
+            color: #fff;
+            font-size: 16px;
+            display: flex;
+            width: 16vw;
+        }
+
+
+
+        .leftFrame figcaption {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0rem 3rem;
+            color: #fff;
+            z-index: 1;
+        }
+
+        .leftFrame figcaption h1.title {
+            color: #fff;
+            margin-bottom: 1.8rem;
+            font-size: 16px;
+        }
+
+        .leftFrame figcaption a.button {
+            background-color: #160ae4;
+            border: 1px solid #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            padding: 5px;
+            display: flex;
+            width: 54px;
+            font-size: 10px;
+        }
+
+        .fourthSection {
+            text-align: center;
+        }
+
+        .fourthSection .content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70vh;
+        }
+
+        .fourthSection .content img {
+            width: 450px;
+        }
+
+        .fourthSection .content .secondcontent p {
+            width: 400px;
+            padding: 10px;
+        }
+
+        .fourthSection .content .secondcontent a {
+            text-decoration: none;
+            color: rgb(124, 124, 250);
+        }
+
+        .fifthSection {
+            text-align: center;
+        }
+
+        .fifthSection .boxmiddle {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 50vh;
+        }
+
+        .fifthSection .boxmiddle {
+            border: 1px solid;
+            border-radius: 37px;
+            margin: 98px;
+            background-color: rgb(153 110 221 / 7%);
+            /* background-color: rgb(110 221 215 / 10%); */
+            border-color: lightslategrey;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .sixSection {
+            height: 60vh;
+        }
+
+        .sixSection .sixFirst {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .sixSection .form {
+            background: white;
+            color: black;
+            padding: 20px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .sixSection .form .form1 {
+            width: 300px;
+            height: 320px;
+        }
+
+        .sixSection .form .form1 .input {
+            color: #666670;
+            background: #e6e0ffee;
+            border: none;
+            border-radius: 4px;
+            padding: 7px;
+            width: 95%;
+        }
+
+        .sixSection .form .form1 .send {
+            margin: 10px 0 5px 0;
+            background: #000;
+            color: #fff;
+            padding: 7px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            width: 100%;
+            cursor: pointer;
+        }
+
+
+        @media screen and (max-width: 1400px) {
+            .firstSection {
+                flex-direction: column-reverse;
+            }
+
+            .box {
+                flex-direction: column;
+            }
+
+            .secondSection .vertical {
+                height: unset;
+            }
+
+            .vertical-title,
+            .vertical-desc {
+                left: 45px;
+            }
+
+            .secondSection .box {
+                width: 50vw;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .leftSection {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .secondSection {
+                height: 141vh;
+            }
+
+            .rightSection {
+                width: 721px !important;
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightSection img {
+                width: 45vw;
+                margin-bottom: 73px;
+            }
+
+            .image-top {
+                top: 133px;
+            }
+
+            .secondSection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            body {
+                min-width: fit-content;
+            }
+
+            .thirdSection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .leftFrame figcaption a.button {
+                display: flex;
+                width: 54px;
+                left: 54px;
+                position: relative;
+            }
+
+            .leftFrame .contain .title {
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+            }
+
+        }
+
+        @media screen and (max-width: 1000px) {
+            .firstSection {
+                flex-direction: column-reverse;
+            }
+
+            .box {
+                flex-direction: column;
+            }
+
+            .secondSection .vertical {
+                height: unset;
+            }
+
+            .vertical-title,
+            .vertical-desc {
+                left: 45px;
+            }
+
+            .secondSection .box {
+                width: 50vw;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .leftSection {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .secondSection {
+                height: 141vh;
+            }
+
+            .rightSection {
+                width: 721px !important;
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightSection img {
+                width: 45vw;
+                margin-bottom: 73px;
+            }
+
+            .image-top {
+                top: 133px;
+            }
+
+            .secondSection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            body {
+                min-width: fit-content;
+            }
+
+            .thirdSection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .leftFrame figcaption a.button {
+                display: flex;
+                width: 54px;
+                left: 51px;
+            }
+
+            .leftFrame .contain .title {
+                display: flex;
+                align-items: center;
+                font-size: 8px;
+                width: 21vw;
+            }
+
+            /*fourth Section*/
+            .fourthSection .content {
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .fourthSection .content .firstcontent img {
+                width: 30%;
+            }
+
+            .fourthSection .content .secondcontent {
+                font-size: 10px;
+            }
+
+            /*fifth section*/
+            .fifthSection .box span {
+                font-size: 8px;
+            }
+
+            .fifthSection .boxmiddle {
+                margin: 33px 16%;
+                height: 35vh;
+            }
+
+            /*six section*/
+            .sixSection {
+                height: 70vh;
+            }
+
+            .sixSection .sixFirst {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .sixSection .sixFirst .para1 {
+                font-size: 10px;
+            }
+
+            .sixSection .sixFirst .form {
+                width: 20%;
+            }
+
+            .sixSection .sixFirst .form form {
+                width: 100%;
+                height: 27vh;
+                font-size: 9px;
+            }
+
+            .sixSection .sixFirst .form form input {
+                width: 100%;
+                font-size: 5px;
+            }
+
+            /*footer*/
+            .footer {
+                display: flex;
+                padding: 4px 0;
+                justify-content: space-evenly;
+            }
+
+            .footer .footer-first {
+                font-size: 10px;
+            }
+
+            .footer .footer-second {
+                width: 45px;
+            }
+
+            .footer .footer-third {
+                width: 45px;
+            }
+
+        }
+
+        @media screen and (max-width:600px) {
+            .firstSection {
+                flex-direction: column-reverse;
+            }
+
+            .box {
+                flex-direction: column;
+            }
+
+            .secondSection .vertical {
+                height: unset;
+            }
+
+            .vertical-title,
+            .vertical-desc {
+                left: 45px;
+            }
+
+            .secondSection .box {
+                width: 50vw;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .leftSection {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .secondSection {
+                height: 141vh;
+            }
+
+            .rightSection {
+                width: 721px !important;
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightSection img {
+                width: 45vw;
+                margin-bottom: 73px;
+            }
+
+            .image-top {
+                top: 133px;
+            }
+
+            .secondSection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            body {
+                min-width: fit-content;
+            }
+
+            .thirdSection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .leftFrame figcaption a.button {
+                display: flex;
+                width: 54px;
+                left: 16px;
+            }
+
+            .leftFrame .contain .title {
+                display: flex;
+                align-items: center;
+                font-size: 8px;
+                width: 21vw;
+            }
+
+            /*fourth Section*/
+            .fourthSection .content {
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .fourthSection .content .firstcontent img {
+                width: 30%;
+            }
+
+            .fourthSection .content .secondcontent {
+                font-size: 10px;
+            }
+
+            /*fifth section*/
+            .fifthSection .box span {
+                font-size: 5px;
+            }
+
+            .fifthSection .boxmiddle {
+                margin: 10px 17%;
+                height: 25vh;
+            }
+
+            /*six section*/
+            .sixSection {
+                height: 70vh;
+            }
+
+            .sixSection .sixFirst {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .sixSection .sixFirst .para1 {
+                font-size: 8px;
+            }
+
+            .sixSection .sixFirst .form {
+                width: 16%;
+            }
+
+            .sixSection .sixFirst .form form {
+                width: 100%;
+                height: 27vh;
+                font-size: 7px;
+            }
+
+            .sixSection .sixFirst .form form input {
+                width: 100%;
+                font-size: 5px;
+            }
+
+            .sixSection .sixFirst .form form button {
+                width: 100%;
+                padding: 2px;
+            }
+
+            /*footer*/
+            .footer {
+                display: flex;
+                padding: 0px 0;
+                justify-content: space-evenly;
+            }
+
+            .footer .footer-first {
+                font-size: 6px;
+            }
+
+            .footer .footer-second {
+                width: 25px;
+            }
+
+            .footer .footer-third {
+                width: 25px;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            header nav {
+                font-size: 7px;
+            }
+
+            .firstSection {
+                flex-direction: column-reverse;
+            }
+
+            .firstSection .leftSection{
+                font-size: 21px;
+            }
+
+            .fifthSection .leftSection .button {
+                width: 17%;
+            }
+
+            .box {
+                flex-direction: column;
+            }
+
+            .secondSection .vertical {
+                height: unset;
+            }
+
+            .vertical-title,
+            .vertical-desc {
+                left: 45px;
+            }
+
+            .secondSection .box {
+                width: 50vw;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .leftSection {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .secondSection {
+                height: 141vh;
+            }
+
+            .rightSection {
+                width: 721px !important;
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightSection img {
+                width: 45vw;
+                margin-bottom: 73px;
+            }
+
+            .image-top {
+                top: 133px;
+            }
+
+            .secondSection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            body {
+                min-width: fit-content;
+            }
+
+            .thirdSection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .leftFrame figcaption a.button {
+                display: flex;
+                width: 54px;
+                left: 16px;
+            }
+
+            .leftFrame .contain .title {
+                display: flex;
+                align-items: center;
+                font-size: 8px;
+                width: 21vw;
+            }
+
+            /*fourth Section*/
+            .fourthSection .content {
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .fourthSection span {
+                font-size: 10px;
+            }
+
+            .fourthSection .content .firstcontent img {
+                width: 25%;
+            }
+
+            .fourthSection .content .secondcontent {
+                font-size: 6px;
+            }
+
+            /*fifth section*/
+            .fifthSection .box span {
+                font-size: 4px;
+            }
+
+            .fifthSection .boxmiddle {
+                margin: 6px 25%;
+                height: 20vh;
+            }
+
+            .fifthSection .boxmiddle .one,
+            .two,
+            .three,
+            .four,
+            .five {
+                font-size: 12px;
+            }
+
+            /*six section*/
+            .sixSection {
+                height: 70vh;
+            }
+
+            .sixSection .sixFirst {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .sixSection .sixFirst .para1 {
+                font-size: 8px;
+            }
+
+            .sixSection .sixFirst .form {
+                width: 16%;
+            }
+
+            .sixSection .sixFirst .form form {
+                width: 100%;
+                height: 27vh;
+                font-size: 7px;
+            }
+
+            .sixSection .sixFirst .form form input {
+                width: 100%;
+                font-size: 5px;
+            }
+
+            .sixSection .sixFirst .form form button {
+                width: 100%;
+                padding: 2px;
+            }
+
+            /*footer*/
+            .footer {
+
+                display: flex;
+                padding: 0px 0;
+                justify-content: space-evenly;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+
+            }
+
+            .footer .footer-first {
+                font-size: 6px;
+            }
+
+            .footer .footer-first .footer-zero {
+                font-size: 15px;
+            }
+
+            .footer .footer-second {
+                width: 10px;
+            }
+
+            .footer .footer-third {
+                width: 10px;
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blur">
+
+        <header>
+            <nav>
+                <div class="left">
+                    <img src="4.png" alt="">
+                    Shaikh <span>Ejaz</span>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li><a href="#home"><span class="active">Home</span></a></li>
+                        <li><a
+                                href="http://127.0.0.1:5500/.vscode/complete%20web%20development/.vscode/Page%20transition/index.html">About</a>
+                        </li>
+                        <li><a href="#Service">Services</a></li>
+                        <li><a href="#project">Project</a></li>
+                        <li><a href="#Contact">Contact Me</a></li>
+                    </ul>
+                    <!-- <label id="symbol"><i><img class="logo" src="menu-48.png" style="width:35px;" alt=""></i></label> -->
+                </div>
+                <div class="rightside">
+                    <div class="side">
+                        <a href="http://127.0.0.1:5500/.vscode/complete%20web%20development/.vscode/Input%20Login%20form/index.html"
+                            target="_self" class="log">Log In</a>
+                        <!--<a href="/" id="sign">Sign In</a>-->
+                    </div>
+                    <div class="mode">
+                        <img src="moon.png" id="icon" alt="">
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="firstSection" id="home">
+                <div class="leftSection">
+                    <div>Hi, My Names is <span class="purple">Shaikh Ejaz</span></div>
+                    <div>and I Am passionate</div>
+                    <span id="element"></span>
+                    <div class="buttons">
+                        <button class="btn" onclick="down()" id="btn1">Download Resume</button>
+                        <button class="btn" onclick="link()" id="btn">Visit Linkedin</button>
+                    </div>
+                </div>
+                <div class="rightSection">
+                    <img src="typing-clipart.png" alt="">
+                </div>
+            </section>
+            <hr>
+            <section class="secondSection">
+                <span class="text-gray">What I have done so far</span>
+                <h1>Work Experience</h1>
+
+                <div class="box">
+                    <div class="vertical">
+                        <img class="image-top" src="html.png" alt="">
+                        <div class="vertical-title">
+                            HTML
+                        </div>
+                        <div class="vertical-desc">
+                            We are responsible for the complete end-to-end coding of websites.
+                            Direct HTML projects, develop web applications, code sites,
+                            and provide support to website users!
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="image-top" src="css3-icon.png" alt="">
+                        <div class="vertical-title">
+                            Css
+                        </div>
+                        <div class="vertical-desc">
+                            Specializes in CSS, taking .psd files and mockups and writing the CSS code that incorporates
+                            all
+                            of the colors,
+                            padding, margins, and more that comprise those designs!
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="image-top" src="javascript-icon-36.png" alt="">
+                        <div class="vertical-title">
+                            JavaScript
+                        </div>
+                        <div class="vertical-desc">
+                            Write, modify, and debug web applications using Node.js, JavaScript, HTML, and CSS
+                            Design,code,
+                            and manage automated test scripts, continuous builds, and deployment Create modern and
+                            responsive layouts based on designs and messaging provided by the creative team Develop new
+                            features,
+                            enhance existing features, and implement bug fixes for code!
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="image-top" src="react-1-logo.png" alt="">
+                        <div class="vertical-title">
+                            React js
+                        </div>
+                        <div class="vertical-desc">
+                            Mobile applications to branded React web solutions , We are with the requisite skills and
+                            competencies can carry out development
+                            while maintaining cost-efficiency!
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="image-top" src="bootstrap-3628663-3029888.webp" alt="">
+                        <div class="vertical-title">
+                            Bootstrap
+                        </div>
+                        <div class="vertical-desc">
+                            A consistent framework that supports major of all browsers and
+                            CSS compatibility fixes Loads of free and professional templates,
+                            WordPress themes and plugins!
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <hr>
+            <section class="thirdSection" id="project">
+                <span class="text-gray">REASON</span>
+                <h1>Get Inspired by these examples</h1>
+                <span class="text-gray">Your New Website - Fast, Easy and at a Low Price</span>
+
+                <div class="frame">
+                    <div class="leftFrame">
+                        <div class="text">
+                            <figure class="contain">
+                                <img class="project" src="shaikh.jpg" alt="">
+                                <figcaption class="middle">
+                                    <h1 class="title">This is NE heart Website, The Online Shooping Store Idea, With
+                                        Great
+                                        Vision.
+                                    </h1>
+                                    <a class="button"
+                                        href="http://127.0.0.1:5500/.vscode/complete%20web%20development/.vscode/NE%20Mall%20Website/index.html"
+                                        target="_blank">Visit Website</a>
+                                    <div class="overlay"></div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="leftFrame">
+                        <div class="text">
+                            <figure class="contain">
+                                <img class="project" src="computer.jpg" alt="">
+                                <figcaption class="middle">
+                                    <h1 class="title">Testimonials is definitely an excellent budget-friendly app and
+                                        the best
+                                        freeware editor for andriod.
+                                    </h1>
+                                    <a class="button"
+                                        href="http://127.0.0.1:5500/.vscode/complete%20web%20development/.vscode/Testimonials%20slider/index.html"
+                                        target="_blank">Visit Website</a>
+                                    <div class="overlay"></div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="leftFrame">
+                        <div class="text">
+                            <figure class="contain">
+                                <img class="project" src="com.webp" alt="">
+                                <figcaption class="middle">
+                                    <h1 class="title">Everyone loves checking things off Your TO-DO List anytime
+                                        anywhere.
+                                    </h1>
+                                    <a class="button"
+                                        href="http://127.0.0.1:5500/.vscode/complete%20web%20development/.vscode/To-do%20list/index.html"
+                                        target="_blank">Visit Website</a>
+                                    <div class="overlay"></div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="leftFrame">
+                        <div class="text">
+                            <figure class="contain">
+                                <img class="project" src="Front-End.jpg" alt="">
+                                <figcaption class="middle">
+                                    <h1 class="title">ShowCase Your work, Its Time To Roll Up your Sleeves and create
+                                        Buzz
+                                        never-seen-before.
+                                    </h1>
+                                    <a class="button"
+                                        href="http://127.0.0.1:5500/.vscode/complete%20web%20development/.vscode/Gym%20website/index.html"
+                                        target="_blank">Visit Website</a>
+                                    <div class="overlay"></div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="leftFrame">
+                        <div class="text">
+                            <figure class="contain">
+                                <img class="project" src="stock.jpg" alt="">
+                                <figcaption class="middle">
+                                    <h1 class="title">You will never "Find" time for everything. if you want time, you
+                                        must
+                                        make it.
+                                    </h1>
+                                    <a class="button"
+                                        href="http://127.0.0.1:5500/.vscode/complete%20web%20development/.vscode/Page%20transition/index.html"
+                                        target="_blank">Visit Website</a>
+                                    <div class="overlay"></div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="leftFrame">
+                        <div class="text">
+                            <figure class="contain">
+                                <img class="project" src="cal.jpg" alt="">
+                                <figcaption class="middle">
+                                    <h1 class="title">I Punched those Numbers into my calculator... And It Makes A Happy
+                                        Face.
+                                    </h1>
+                                    <a class="button"
+                                        href="http://127.0.0.1:5500/.vscode/complete%20web%20development/.vscode/calulator/index.html"
+                                        target="_blank">Visit Website</a>
+                                    <div class="overlay"></div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <hr>
+            <section class="fourthSection">
+                <h1>Are you ready? Let's go!!</h1>
+                <span class="text-gray">Design and code is not just what it looks like and feels like. Design is how it
+                    works</span>
+
+                <div class="head">
+                    <div class="content">
+                        <div class="firstcontent">
+                            <img src="websit.png" alt="">
+                        </div>
+                        <div class="secondcontent">
+                            <h1>Coder First</h1>
+                            <p>As a Front-end web developer work on the visual part of the website the pages visitors
+                                see
+                                and interact with (also known as the user interface). They design the physical layout of
+                                each page, integrate graphics, and use HTML and JavaScript to enhance the site.</p>
+                            <a href="">LEARN MORE&#10230;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="head">
+                    <div class="content">
+                        <div class="secondcontent">
+                            <h1>Design Part</h1>
+                            <p>A Web designer determines and develops the look and feel for sites, and is responsible
+                                fdor
+                                site navigation design an visual execution.</p>
+                            <a href="">LEARN MORE&#10230;</a>
+                        </div>
+                        <div class="firstcontent">
+                            <img src="webcontent.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="head">
+                    <div class="content">
+                        <div class="firstcontent">
+                            <img src="web.webp" alt="">
+                        </div>
+                        <div class="secondcontent">
+                            <h1>Fully Remote</h1>
+                            <p>Our Company provide Service That remotely manages a Customer's techonology(IT)
+                                infratructure
+                                and end-user system. </p>
+                            <a href="">LEARN MORE&#10230;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="head">
+                    <div class="content">
+                        <div class="secondcontent">
+                            <h1>Easy Process</h1>
+                            <p>The client sets out with one goal in mind, but this gradually expands, evolves, or
+                                changes
+                                altogether during the design process — and the next thing you know, we're not only
+                                designing
+                                and building a website, but also a web app, emails, and push notifications much more.
+                            </p>
+                            <a href="">LEARN MORE&#10230;</a>
+                        </div>
+                        <div class="firstcontent">
+                            <img src="web-icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section class="fifthSection">
+                <div class="box" id="Service">
+                    <h1>Why you Should work with Us!</h1>
+                    <span class="text-gray">The ability to create amazing products, Websites, Web desings and Web
+                        Developemnt is the number one reason why We love our Work. It also helps that We have the
+                        freedom to
+                        be creative, work with great people...</span>
+
+                    <div class="boxmiddle">
+                        <div class="one">
+                            <img src="icons8-bursts-50.png" alt="">
+                            <h3>UI Design</h3>
+                        </div>
+                        <div class="two">
+                            <img src="icons8-ui-design-64.png" alt="">
+                            <h3>UX Design</h3>
+                        </div>
+                        <div class="three">
+                            <img src="icons8-testing-58.png" alt="">
+                            <h3>Testing</h3>
+                        </div>
+                        <div class="four">
+                            <img src="icons8-website-64.png" alt="">
+                            <h3>Development</h3>
+                        </div>
+                        <div class="five">
+                            <img src="icons8-web-64.png" alt="">
+                            <h3>Maintence</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section class="sixSection">
+                <div class="sixFirst" id="Contact">
+                    <div class="para1">
+                        <div style="color: white;">CONTACT</div>
+                        <h1>Have You Any Project?<br>
+                            Please Drop a Message</h1>
+                        <br>
+                        <!--<div style="width: 1px;
+                    background-color: white;
+                    margin: 0 6vw;">
+                    </div>-->
+                        <p class="text-gray">Get in touch and let me know how can help.
+                            <br>Fill out the form and i'll be in touch as soon as possible.
+                        </p>
+                        <br>
+                        <br>
+                        <h4>Address:</h4>
+                        <p class="text-gray" style="margin-left: 25px;">Old Agra Road, Malegaon, Maharastra - 423203</p>
+                        <br>
+                        <br>
+                        <h4>&#128222; Phone:</h4>
+                        <p class="text-gray" style="margin-left: 25px;">(01) 234 000 789<br>(01) 765 000 200</p>
+                        <br>
+                        <br>
+                        <h4>&#9993; Email:</h4>
+                        <p class="text-gray" style="margin-left: 21px;">info@shaikh.com<br>support@shaikh.com</p>
+                        <br>
+                        <div class="social">
+                            <!--
+                        <ul>
+                            <li><img src="icons8-github-50.png" alt=""></li>
+                            <li><img src="icons8-linkedin-50.png" alt=""></li>
+                            <li><img src="icons8-twitter-50.png" alt=""></li>
+                            <li><img src="insta.png" alt=""></li>
+                            <li><img src="facebook.png" alt=""></li>
+                        </ul>
+                    -->
+                        </div>
+                    </div>
+                    <div class="form">
+                        <form class="form1" action="action_page.php">
+                            <p style="margin: 0px 0 5px 0;">Name</p>
+                            <input class="input" type="text" placeholder="&#128100; e.g john doe">
+                            <br>
+                            <p style="margin: 10px 0 5px 0;">Email</p>
+                            <input class="input" type="email" placeholder="&#9993; e.g johndoe@gmail.com">
+                            <br>
+                            <p style="margin: 10px 0 5px 0;">Phone</p>
+                            <input class="input" type="number" name="number" id="number"
+                                placeholder="&#128222; Phone Number">
+                            <br>
+                            <p style="margin: 10px 0 5px 0;">Message</p>
+                            <input class="input" style="height: 18%;" type="text" name="message" id=""
+                                placeholder="Write message...">
+                            <br>
+                            <button class="send" type="submit">SEND</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer">
+                <div class="footer-first">
+                    <div class="footer-zero">
+                        <h1>Shaikh<span style="color:blue">Ejaz</span></h1>
+                    </div>
+                    <h3 style="color:#000">Don't Miss Out</h3>
+                    <h4>Get in Touch Now</h4>
+                    <h5>Try Today! Make Buzz</h5>
+                </div>
+                <div class="footer-second">
+                    <ul>
+                        <li><img src="icons8-github-50.png" alt=""></li>
+                        <li><img src="icons8-linkedin-50.png" alt=""></li>
+                        <li><img src="icons8-twitter-50.png" alt=""></li>
+                    </ul>
+                </div>
+                <div class="footer-third">
+                    <ul>
+                        <li><img src="insta.png" alt=""></li>
+                        <li><img src="icons8-email-50.png" alt=""></li>
+                        <li><img src="facebook.png" alt=""></li>
+                    </ul>
+                </div>
+                <div class="footer-fourth">
+                    <h3 style="color:#000">COMPANY</h3>
+                    <ul>
+                        <li><a href="/">Policy</a></li>
+                        <li><a href="/">Contact</a></li>
+                        <li><a href="/">About Us</a></li>
+                        <li><a href="/">FeedBack</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-rights">
+                Copyright &#169; shaikhportfolio.com | All rights reserved
+            </div>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!--Set up and start animation-->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Web Designer', 'React js Developer', 'Responsive Web Designer.'],
+            typeSpeed: 50,
+        });
+    </script>
+    <script>
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function () {
+            document.body.classList.toggle("light-theme")
+            if (document.body.classList.contains("light-theme")) {
+                icon.src = "sun.png";
+            } else {
+                icon.src = "moon.png";
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
